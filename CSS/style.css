@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    vertical-align:top ;
 }
 
 #container {
@@ -10,6 +11,12 @@
     justify-content: center;
     min-height: 100vh;
     background-color:  #ffd90f;
+}
+
+
+/* ================= HEADER ======================== */
+figure{
+    width: 100%;
 }
 
 .card-header {
@@ -36,11 +43,11 @@
     width: 1000px;
 }
 
+/* ============ MAIN =========== */
 .body {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     
 }
@@ -55,69 +62,118 @@
     background-color: rgb(118, 165, 227) ;
     box-sizing: border-box;
     padding: 10px;
-    margin: 30px 10px;
+    margin: 30px 3px;
     width: 15%;
-    position: relative;
-    top: -100px;
+    gap: 10px;
 }
 
 .menu a {
     color: #fff;
+    
 }
 
 .article {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-self: start;
+    text-align: justify;
     box-sizing: border-box;
     margin: 5px 5px;
-    width: 66%;
+    width: 60%;
 }
 
 .article h1 {
     color: #ffd90f;
     box-sizing: border-box;
-    padding: 10px;
-    margin: 15px 10px;
-    position: relative;
-    left: -22px;
-    bottom: -11px;
-    
-}
-
-.article p {
-    display: flex;
-    text-align: justify;
+    padding: 10px 0px;
+    margin: 15px 0px;
 }
 
 .mg-bio {
     color: #fff;
     display: flex;
-    text-align: justify;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: rgb(118, 165, 227);
     box-sizing: border-box;
     padding: 10px;
-    margin: 30px 10px;
-    width: 19%;
+    margin: 30px 3px;
+    width: 20%;
     
 }
 
+.mg-bio figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 10px 0px;
+}
+
 .mg-bio img {
-    width: 100px;
+    display: flex;
+    text-align: justify;
+    box-sizing: border-box;
+    border: solid #fff 1px;
+    margin: 3px 0px;;
+    width: 110px;
 }
 
 .mg-bio p {
-    position: relative;
-    bottom: -10px;
+    display: flex;
+    text-align: justify;
 }
+
+/* ============== FOOTER ================== */
 
 .card-foot {
     display: flex;
     justify-content: center;
     background-color: rgb(112, 112, 240);
     color: #fff;
+}
+
+/* =============== MOBILE VERSION ===================== */
+
+@media screen and (max-width: 640px) {
+    *{
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .title {
+        display: none;
+    }
+    
+    .card {
+        width: auto;
+    }
+
+    .body {
+        align-items: center;
+    }
+
+    .menu {
+        margin: 30px 95px;
+        width: 80%;
+    }
+
+    .article {
+        width: 90%;
+    }
+    
+    .mg-bio {
+        width: 66%;
+    }
+
+    
+
+    
 }
